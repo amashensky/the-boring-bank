@@ -84,3 +84,4 @@ All colors are CSS variables at the top of `app/globals.css`:
 --muted: #7A7872;     /* captions, labels */
 ```
 Change those six values and the whole site reskins.
+
