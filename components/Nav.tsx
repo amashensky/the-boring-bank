@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Logo from "./Logo";
+import LogoText from "./LogoText";
 
 function Chevron() {
   return (
@@ -15,8 +15,7 @@ export default function Nav({ solid = false }: { solid?: boolean }) {
       <div className="container nav-wrap">
         <div className="nav-left">
           <Link href="/" className="logo">
-            <Logo size={26} />
-            <span className="logo-text">The Boring Bank</span>
+            <LogoText size={26} />
           </Link>
           <div className="nav-links">
             <div className="nav-group">

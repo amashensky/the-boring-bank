@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Logo from "./Logo";
+import LogoText from "./LogoText";
 
 export default function Footer() {
   return (
@@ -8,8 +8,7 @@ export default function Footer() {
         <div className="foot-grid">
           <div className="foot-col">
             <Link href="/" className="logo" style={{ marginBottom: 4, color: "#fff" }}>
-              <Logo size={24} />
-              <div className="logo-text" style={{ marginLeft: 10 }}>The Boring Bank</div>
+              <LogoText size={24} />
             </Link>
             <p className="foot-about">
               The investment bank for secondaries. Sub&#8209;$100M specialist serving LPs and GPs.

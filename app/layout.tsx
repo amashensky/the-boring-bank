@@ -23,6 +23,9 @@ export const metadata: Metadata = {
   title: "The Boring Bank. The Investment Bank for Secondaries.",
   description:
     "Faster liquidity. Better pricing. The sub-$100M secondary specialist for LPs and GPs.",
+  icons: {
+    icon: "/favicon.svg",
+  },
   openGraph: {
     title: "The Boring Bank",
     description: "The Investment Bank for Secondaries.",
