@@ -6,49 +6,6 @@ export const metadata = {
 };
 
 export default function AdvisoryPage() {
-  const services = [
-    {
-      kicker: "01",
-      title: "Portfolio Advisory",
-      description: "Evaluate your full LP book for potential exits. We identify which positions have the best secondary market dynamics and help you sequence dispositions to maximize total proceeds.",
-      details: [
-        "Full portfolio screening by strategy, vintage, and liquidity profile",
-        "Exit sequencing to optimize timing and pricing",
-        "Market color on current bid levels by fund type",
-      ],
-    },
-    {
-      kicker: "02",
-      title: "GP Advisory",
-      description: "Structure continuation vehicles, tender offers, and LP liquidity solutions. We advise GPs on pricing, investor communications, and process design.",
-      details: [
-        "Continuation vehicle structuring and pricing",
-        "Tender offer design and investor communication",
-        "LP consent and regulatory navigation",
-      ],
-    },
-    {
-      kicker: "03",
-      title: "Valuation Advisory",
-      description: "Independent NAV analysis and pricing opinions for internal committees, auditors, or transaction counterparties. Built from comps, not models.",
-      details: [
-        "Holding&#8209;level NAV reconstruction with confidence bands",
-        "Comparable transaction analysis across 38+ data points",
-        "Defensible pricing memos for IC or board review",
-      ],
-    },
-    {
-      kicker: "04",
-      title: "Transaction Advisory",
-      description: "End&#8209;to&#8209;end deal execution for complex or bespoke secondary transactions that fall outside a standard LP sale or GP&#8209;led process.",
-      details: [
-        "Cross&#8209;fund portfolio sales and strip transactions",
-        "Stapled secondary and co&#8209;investment structures",
-        "Multi&#8209;party negotiations and syndicated buyer groups",
-      ],
-    },
-  ];
-
   return (
     <>
       <header className="page-intro">
@@ -60,32 +17,48 @@ export default function AdvisoryPage() {
 
       <section>
         <div className="container">
-          <div className="section-label">What We Cover</div>
-          <h2 className="with-accent">Four practices. One focus.</h2>
-          <p className="section-lede" style={{ marginTop: 18 }}>
-            Every engagement is scoped to your situation. No retainers. No templated decks. Bespoke advice backed by live market data.
-          </p>
+          <h2 className="with-accent">Bespoke counsel. No retainers.</h2>
 
-          <div className="advisory-grid" style={{ marginTop: 64 }}>
-            {services.map((s, i) => (
-              <div key={i} className="advisory-card">
-                <div className="advisory-kicker">{s.kicker}</div>
-                <h3 className="advisory-title">{s.title}</h3>
-                <p className="advisory-desc">{s.description}</p>
-                <ul className="advisory-list">
-                  {s.details.map((d, j) => (
-                    <li key={j} dangerouslySetInnerHTML={{ __html: d }} />
-                  ))}
-                </ul>
+          <div className="adv-stack" style={{ marginTop: 64 }}>
+
+            <div className="adv-row">
+              <div className="adv-num">01</div>
+              <div className="adv-content">
+                <h3>Portfolio Advisory</h3>
+                <p>Screen your full LP book. Identify the best exits. Sequence dispositions for maximum proceeds.</p>
               </div>
-            ))}
+            </div>
+
+            <div className="adv-row">
+              <div className="adv-num">02</div>
+              <div className="adv-content">
+                <h3>GP Advisory</h3>
+                <p>Structure continuation vehicles and tender offers. Pricing, investor comms, and process design.</p>
+              </div>
+            </div>
+
+            <div className="adv-row">
+              <div className="adv-num">03</div>
+              <div className="adv-content">
+                <h3>Valuation Advisory</h3>
+                <p>Independent NAV analysis and pricing opinions. Built from comps, not models. IC and board ready.</p>
+              </div>
+            </div>
+
+            <div className="adv-row">
+              <div className="adv-num">04</div>
+              <div className="adv-content">
+                <h3>Transaction Advisory</h3>
+                <p>Complex secondaries that fall outside a standard sale. Strip transactions, syndicated buyers, bespoke structures.</p>
+              </div>
+            </div>
+
           </div>
         </div>
       </section>
 
       <section style={{ background: "var(--stone)", borderTop: "1px solid var(--line-soft)", borderBottom: "1px solid var(--line-soft)" }}>
         <div className="container">
-          <div className="section-label">How It Works</div>
           <h2 className="with-accent">Scoped. Priced. Delivered.</h2>
           <div className="pillars" style={{ marginTop: 56 }}>
             <div className="pillar">

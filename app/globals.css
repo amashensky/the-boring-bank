@@ -776,3 +776,25 @@ h2.with-accent::after { content: ""; position: absolute; left: 0; bottom: 0; wid
 @media (max-width: 960px) {
   .advisory-grid { grid-template-columns: 1fr; gap: 32px; }
 }
+
+/* ============ Document Cards ============ */
+.doc-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px; }
+.doc-card { padding: 28px; background: var(--white); border-radius: 8px; border: 1px solid var(--line-soft); }
+.doc-num { font-size: 11px; font-weight: 600; letter-spacing: 0.12em; color: var(--taupe); margin-bottom: 12px; }
+.doc-card h4 { font-size: 16px; font-family: var(--font-serif), serif; font-weight: 600; color: var(--ink); margin-bottom: 10px; line-height: 1.3; }
+.doc-card p { font-size: 13px; line-height: 1.55; color: var(--muted); }
+
+@media (max-width: 960px) {
+  .doc-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; }
+}
+@media (max-width: 600px) {
+  .doc-grid { grid-template-columns: 1fr; }
+}
+
+/* ============ Advisory Stack ============ */
+.adv-stack { display: flex; flex-direction: column; }
+.adv-row { display: flex; align-items: baseline; gap: 32px; padding: 36px 0; border-bottom: 1px solid var(--line-soft); }
+.adv-row:first-child { border-top: 1px solid var(--line-soft); }
+.adv-num { font-size: 12px; font-weight: 600; letter-spacing: 0.12em; color: var(--taupe); flex-shrink: 0; width: 40px; }
+.adv-content h3 { font-size: 20px; font-family: var(--font-serif), serif; font-weight: 600; color: var(--ink); margin-bottom: 8px; }
+.adv-content p { font-size: 15px; line-height: 1.55; color: var(--muted); max-width: 640px; }
