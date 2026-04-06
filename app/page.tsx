@@ -32,12 +32,12 @@ export default function HomePage() {
         <div className="container">
           <div className="stats-grid">
             <div className="stat">
-              <div className="stat-num"><AnimatedCounter to={15} suffix="x" /></div>
-              <div className="stat-desc">More liquidity options</div>
+              <div className="stat-num">Expanded</div>
+              <div className="stat-desc">Liquidity access</div>
             </div>
             <div className="stat">
-              <div className="stat-num"><AnimatedCounter to={30} suffix="%" /></div>
-              <div className="stat-desc">Better pricing</div>
+              <div className="stat-num">Competitive</div>
+              <div className="stat-desc">Market pricing</div>
             </div>
             <div className="stat">
               <div className="stat-num">Weeks</div>

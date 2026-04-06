@@ -1,14 +1,14 @@
 export function PackagePreviewCard() {
   const items = [
-    { kicker: "NAV", title: "Holding\u2011by\u2011holding rebuild", detail: "Confidence band, 38 comps", status: "Verified" },
+    { kicker: "NAV", title: "Holding&#8209;by&#8209;holding rebuild", detail: "Confidence band, 38 comps", status: "Verified" },
     { kicker: "Legal", title: "LPA + flag register", detail: "ROFRs, transfer restrictions", status: "Flagged" },
     { kicker: "Pricing", title: "Indicative range", detail: "With comps + scenarios", status: "Stamped" },
-    { kicker: "Track Record", title: "Fund family + benchmarks", detail: "Vintage\u2011year comparables", status: "Loaded" },
+    { kicker: "Track Record", title: "Fund family + benchmarks", detail: "Vintage&#8209;year comparables", status: "Loaded" },
   ];
   return (
     <div className="pv-card">
       <div className="pv-head">
-        <div className="pv-title">IC\u2011Ready Package</div>
+        <div className="pv-title">IC&#8209;Ready Package</div>
         <span className="pv-badge">Preview</span>
       </div>
       {items.map((it, i) => (
@@ -45,7 +45,7 @@ export function DealFlowCard() {
       </div>
       <div className="pv-field">
         <span className="pv-label">Mandate</span>
-        <span className="pv-value">NA Buyout, 2016\u20112020, $5\u201150M</span>
+        <span className="pv-value">NA Buyout, 2016&#8209;2020, $5&#8209;50M</span>
       </div>
       <div style={{ marginTop: 12, paddingTop: 10, borderTop: "1px solid var(--line-soft)" }}>
         <div style={{ fontSize: 10, letterSpacing: "0.14em", textTransform: "uppercase", color: "var(--muted)", fontWeight: 600, marginBottom: 10 }}>Matched Deal Flow</div>
@@ -105,7 +105,7 @@ export function FeeModelCard() {
 
 export function JourneyFlow() {
   const milestones = [
-    { day: "Step 01", label: "Intake", sub: "K\u20111s + LPA", pos: 0 },
+    { day: "Step 01", label: "Intake", sub: "K&#8209;1s + LPA", pos: 0 },
     { day: "Step 02", label: "NAV Rebuilt", sub: "Comps layered", pos: 16 },
     { day: "Step 03", label: "Package Live", sub: "Blind to buyers", pos: 40 },
     { day: "Step 04", label: "First Bids", sub: "Live leaderboard", pos: 52 },

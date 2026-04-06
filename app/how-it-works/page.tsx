@@ -1,5 +1,6 @@
 import CtaBand from "@/components/CtaBand";
-import { JourneyFlow, OpportunityCard, BidsCard, ClosingCard } from "@/components/ProductVisuals";
+import { TransactionFlow } from "@/components/TransactionFlow";
+import { MethodologyCard } from "@/components/MethodologyCard";
 
 export const metadata = {
   title: "How It Works. The Boring Bank.",
@@ -19,33 +20,22 @@ export default function HowItWorksPage() {
       <section>
         <div className="container">
           <div className="section-label">Transaction Journey</div>
-          <h2 className="with-accent">One track. Six milestones.</h2>
-          <p className="section-lede" style={{ marginTop: 18 }}>Every transaction is bespoke. The steps below outline how we run a typical process.</p>
+          <h2 className="with-accent">Who does what, at every stage.</h2>
+          <p className="section-lede" style={{ marginTop: 18 }}>Every transaction involves parallel workflows. Here's what each party handles at each step.</p>
           <div style={{ marginTop: 56 }}>
-            <JourneyFlow />
+            <TransactionFlow />
           </div>
         </div>
       </section>
 
       <section>
         <div className="container">
-          <div className="section-label">What You See</div>
-          <h2 className="with-accent">Product, at every stage.</h2>
-          <p className="section-lede" style={{ marginTop: 18 }}>A single dashboard follows the deal from draft to wire. Three snapshots:</p>
+          <div className="section-label">Methodology</div>
+          <h2 className="with-accent">What we evaluate at each stage.</h2>
+          <p className="section-lede" style={{ marginTop: 18 }}>Institutional&#8209;grade diligence. Every deal gets the same rigor.</p>
 
-          <div className="product-grid" style={{ marginTop: 56 }}>
-            <div className="product-cell">
-              <div className="product-cell-label">Stage 1 &middot; Draft</div>
-              <OpportunityCard />
-            </div>
-            <div className="product-cell">
-              <div className="product-cell-label">Stage 2 &middot; Bids</div>
-              <BidsCard />
-            </div>
-            <div className="product-cell">
-              <div className="product-cell-label">Stage 3 &middot; Close</div>
-              <ClosingCard />
-            </div>
+          <div style={{ marginTop: 56 }}>
+            <MethodologyCard />
           </div>
         </div>
       </section>
