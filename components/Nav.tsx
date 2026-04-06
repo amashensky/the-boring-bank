@@ -23,8 +23,8 @@ export default function Nav({ solid = false }: { solid?: boolean }) {
               <div className="nav-dropdown">
                 <Link href="/services/lp-led">LP&#8209;Led Secondary<span className="sub">Sell your LP stake to qualified buyers</span></Link>
                 <Link href="/services/gp-led">GP&#8209;Led Liquidity<span className="sub">Continuation vehicles and restructurings</span></Link>
-                <Link href="/for-buyers">Buyer Network<span className="sub">Join our curated institutional network</span></Link>
                 <Link href="/services/structured">Structured Solutions<span className="sub">NAV financing and preferred equity</span></Link>
+                <Link href="/services/advisory">Advisory<span className="sub">Portfolio, GP, valuation, and transaction counsel</span></Link>
               </div>
             </div>
             <div className="nav-group">

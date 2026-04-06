@@ -22,13 +22,12 @@ export default function LpLedPage() {
             <div className="split">
               <div className="split-copy">
                 <div className="section-label">Timeline</div>
-                <h3>A single track from intake to wire.</h3>
-                <p>Every transaction is bespoke. Our process runs intake, diligence package, competitive bidding, and close on one parallel track so each phase feeds directly into the next without idle time.</p>
-                <p style={{ marginTop: 14 }}>You upload what you have. We rebuild NAV holding by holding, flag every transfer restriction in the LPA, and produce a pricing memo with comps. From there, a blind profile goes to matched buyers and bids come in on a live leaderboard.</p>
+                <h3>One track. Intake to wire.</h3>
+                <p>Upload your docs. We rebuild NAV, flag restrictions, and produce a pricing memo. Blind profile goes to matched buyers. Bids rank on a live leaderboard.</p>
                 <ul className="feature-list">
-                  <li><span>Prepare: K&#8209;1s and LPA ingested, NAV reconstructed, pricing memo with confidence band</span></li>
-                  <li><span>Match: blind profile to scored buyers, live bid leaderboard ranked by price and structure</span></li>
-                  <li><span>Close: SPA drafted, GP consent coordinated, transfer mechanics handled, success fee on wire</span></li>
+                  <li><span>Prepare: NAV rebuilt, LPA flagged, pricing memo stamped</span></li>
+                  <li><span>Match: blind profile to scored buyers, live bid ranking</span></li>
+                  <li><span>Close: SPA drafted, GP consent, success fee on wire</span></li>
                 </ul>
               </div>
               <div className="split-visual"><TimelineCard /></div>
@@ -37,15 +36,12 @@ export default function LpLedPage() {
             <div className="split flip">
               <div className="split-copy">
                 <div className="section-label">Buyer Coverage</div>
-                <h3>Hundreds of live mandates across five buyer classes.</h3>
-                <p>We maintain active relationships with secondary funds, family offices, endowments, pensions, and sovereign wealth funds. Each buyer on our network has a stated mandate with defined parameters: strategy, vintage, geography, ticket size, and structure preference.</p>
-                <p style={{ marginTop: 14 }}>When your listing goes live, we do not mass&#8209;blast. We score every active mandate against your position and surface the deal only to the buyers with genuine fit. That means fewer, higher&#8209;conviction bids and a faster path to a competitive clear price.</p>
+                <h3>Scored mandates. No mass&#8209;blast.</h3>
+                <p>We match your position to buyers with genuine fit across secondary funds, family offices, endowments, pensions, and sovereign wealth. Fewer bids, higher conviction, faster close.</p>
                 <ul className="feature-list">
-                  <li><span>Five buyer classes: secondary funds, family offices, endowments, pensions, sovereign wealth funds</span></li>
-                  <li><span>Mandate&#8209;level scoring on strategy, vintage, geography, and ticket size</span></li>
-                  <li><span>Blind profile until you explicitly authorize full disclosure to a specific buyer</span></li>
-                  <li><span>Live bid leaderboard ranked by price, structure, and expected time to close</span></li>
-                  <li><span>No cold outreach, no broad distribution, no information leakage</span></li>
+                  <li><span>Mandate&#8209;level scoring on strategy, vintage, and ticket size</span></li>
+                  <li><span>Blind profile until you authorize disclosure</span></li>
+                  <li><span>No cold outreach, no information leakage</span></li>
                 </ul>
               </div>
               <div className="split-visual"><BuyerNetworkCard /></div>

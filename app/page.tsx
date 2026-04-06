@@ -32,16 +32,16 @@ export default function HomePage() {
         <div className="container">
           <div className="stats-grid">
             <div className="stat">
-              <div className="stat-num">Expanded</div>
-              <div className="stat-desc">Liquidity access</div>
+              <div className="stat-num"><AnimatedCounter to={200} suffix="+" /></div>
+              <div className="stat-desc">Qualified buyers</div>
             </div>
             <div className="stat">
-              <div className="stat-num">Competitive</div>
-              <div className="stat-desc">Market pricing</div>
+              <div className="stat-num"><AnimatedCounter to={3} suffix="+" /></div>
+              <div className="stat-desc">Competing bids avg</div>
             </div>
             <div className="stat">
               <div className="stat-num">Weeks</div>
-              <div className="stat-desc">To initial offers, target path</div>
+              <div className="stat-desc">To first bids</div>
             </div>
             <div className="stat">
               <div className="stat-num"><AnimatedCounter to={0} prefix="$" /></div>

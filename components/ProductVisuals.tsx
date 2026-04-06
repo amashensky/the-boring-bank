@@ -1,9 +1,9 @@
 export function PackagePreviewCard() {
   const items = [
-    { kicker: "NAV", title: "Holding&#8209;by&#8209;holding rebuild", detail: "Confidence band, 38 comps", status: "Verified" },
-    { kicker: "Legal", title: "LPA + flag register", detail: "ROFRs, transfer restrictions", status: "Flagged" },
-    { kicker: "Pricing", title: "Indicative range", detail: "With comps + scenarios", status: "Stamped" },
-    { kicker: "Track Record", title: "Fund family + benchmarks", detail: "Vintage&#8209;year comparables", status: "Loaded" },
+    { kicker: "NAV", title: "Full portfolio valuation", detail: "38 comps, confidence band", status: "Verified" },
+    { kicker: "Legal", title: "Transfer restriction review", detail: "ROFRs, consent requirements", status: "Flagged" },
+    { kicker: "Pricing", title: "Indicative price range", detail: "Comps and scenario analysis", status: "Stamped" },
+    { kicker: "Track Record", title: "Fund performance benchmarks", detail: "Returns vs. vintage peers", status: "Loaded" },
   ];
   return (
     <div className="pv-card">
@@ -105,7 +105,7 @@ export function FeeModelCard() {
 
 export function JourneyFlow() {
   const milestones = [
-    { day: "Step 01", label: "Intake", sub: "K&#8209;1s + LPA", pos: 0 },
+    { day: "Step 01", label: "Intake", sub: "K\u20111s + LPA", pos: 0 },
     { day: "Step 02", label: "NAV Rebuilt", sub: "Comps layered", pos: 16 },
     { day: "Step 03", label: "Package Live", sub: "Blind to buyers", pos: 40 },
     { day: "Step 04", label: "First Bids", sub: "Live leaderboard", pos: 52 },
