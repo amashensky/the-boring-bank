@@ -12,8 +12,7 @@ Next.js 14 (App Router) site for theboringbank.com.
 - `/` — Homepage (hero, Deal Certificate, trusted strip, stats, how it works, advantage, CTA)
 - `/how-it-works` — 6-phase process deep dive
 - `/team` — Founders + story
-- `/for-sellers` — Seller-focused landing with comparison table and FAQ
-- `/for-buyers` — Buyer-focused landing
+- `/for-buyers` — Buyer landing (home-style: hero, stats, 3-step path, who we serve, what you get, FAQ, CTA)
 - `/contact` — Intake form (client component, no backend wired yet)
 
 ## Running Locally

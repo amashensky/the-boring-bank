@@ -42,7 +42,7 @@ export default function ContactForm() {
       </div>
       <div className="field">
         <label htmlFor="fund">Fund Name (if comfortable)</label>
-        <input id="fund" type="text" placeholder="Meridian Growth Fund IV, L.P." />
+        <input id="fund" type="text" placeholder="Vantage Strand Fund IV, L.P." />
       </div>
       <div className="field">
         <label htmlFor="size">Commitment Size</label>
@@ -61,7 +61,7 @@ export default function ContactForm() {
       </div>
       <div className="full" style={{ marginTop: 8, display: "flex", gap: 16, alignItems: "center", flexWrap: "wrap" }}>
         <button type="submit" className="btn btn-primary">Submit Request <Arrow /></button>
-        <div style={{ fontSize: 12, color: "var(--muted)" }}>We respond within one business day. Your submission is confidential.</div>
+        <div style={{ fontSize: 12, color: "var(--muted)" }}>Your inquiry is confidential.</div>
       </div>
     </form>
   );

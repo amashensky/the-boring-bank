@@ -1,36 +1,6 @@
-export function TimelineCard() {
-  return (
-    <div className="pv-card">
-      <div className="pv-head">
-        <div className="pv-title">LP&#8209;Led Timeline</div>
-        <span className="pv-badge">Illustrative</span>
-      </div>
-      <div style={{ padding: "10px 4px 4px" }}>
-        <div className="tl-track">
-          <div className="tl-fill" style={{ width: "58%" }} />
-          <div className="tl-dot" style={{ left: "0%" }} />
-          <div className="tl-dot" style={{ left: "40%" }} />
-          <div className="tl-dot active" style={{ left: "58%" }} />
-          <div className="tl-dot" style={{ left: "100%" }} />
-        </div>
-        <div className="tl-labels">
-          <div><div className="tl-day">Step 01</div><div className="tl-title">Intake</div></div>
-          <div style={{ textAlign: "center" }}><div className="tl-day">Step 02</div><div className="tl-title">Package Live</div></div>
-          <div style={{ textAlign: "center" }}><div className="tl-day">Step 03</div><div className="tl-title">Bids In</div></div>
-          <div style={{ textAlign: "right" }}><div className="tl-day">Step 04</div><div className="tl-title">Wire</div></div>
-        </div>
-      </div>
-      <div className="pv-field" style={{ marginTop: 18 }}>
-        <span className="pv-label">Buyers Engaged</span>
-        <span className="pv-value">11 of 58 matched</span>
-      </div>
-      <div className="pv-field">
-        <span className="pv-label">Indicative Clear</span>
-        <span className="pv-value big">96 to 99 NAV</span>
-      </div>
-    </div>
-  );
-}
+import { BuyerCoverageLpCard } from "./BuyerCoverageLpCard";
+
+export { TimelineCard } from "./LPTimelineCard";
 
 export function CapitalStackCard() {
   const tranches = [
@@ -40,12 +10,12 @@ export function CapitalStackCard() {
     { name: "GP Commitment", size: "15%", rate: "Promote", color: "#B9A98A" },
   ];
   return (
-    <div className="pv-card">
+    <div className="pv-card pv-card--split-height-match pv-card--mock-live">
       <div className="pv-head">
         <div className="pv-title">Capital Stack</div>
         <span className="pv-badge">$82M Position</span>
       </div>
-      <div style={{ padding: "6px 0 4px" }}>
+      <div className="pv-card-grow" style={{ padding: "6px 0 4px" }}>
         {tranches.map((t, i) => (
           <div key={i} className="stack-row">
             <div className="stack-bar" style={{ background: t.color, width: t.size }} />
@@ -57,7 +27,7 @@ export function CapitalStackCard() {
           </div>
         ))}
       </div>
-      <div className="pv-field" style={{ marginTop: 12 }}>
+      <div className="pv-card-footer pv-field" style={{ marginTop: 12 }}>
         <span className="pv-label">Blended Cost</span>
         <span className="pv-value big">9.4%</span>
       </div>
@@ -67,12 +37,12 @@ export function CapitalStackCard() {
 
 export function CVStructureCard() {
   return (
-    <div className="pv-card">
+    <div className="pv-card pv-card--mock-live">
       <div className="pv-head">
         <div className="pv-title">Continuation Vehicle</div>
         <span className="pv-badge">Single Asset</span>
       </div>
-      <div className="cv-diagram">
+      <div className="cv-diagram cv-diagram--live">
         <div className="cv-box source">
           <div className="cv-box-label">Existing Fund</div>
           <div className="cv-box-name">Fund IV &middot; 2017 Vintage</div>
@@ -102,16 +72,23 @@ export function CVStructureCard() {
   );
 }
 
-export function BuyerNetworkCard() {
-  const tiers = [
-    { key: "sf", name: "Secondary Funds", count: 210, sample: "Ardian, Lexington, HarbourVest" },
-    { key: "fo", name: "Family Offices", count: 140, sample: "Pritzker, Walton, Bertarelli" },
-    { key: "en", name: "Endowments", count: 62, sample: "Yale, Notre Dame, Duke" },
-    { key: "pn", name: "Pensions", count: 48, sample: "CalPERS, Ontario Teachers, APG" },
-    { key: "sv", name: "Sovereigns", count: 22, sample: "GIC, ADIA, Mubadala" },
-  ];
+type BuyerNetworkCardProps = { variant?: "full" | "lp" };
+
+const BUYER_TIERS = [
+  { key: "sf", abbr: "SF", name: "Secondary Funds", count: 210, sample: "Northbridge, Clearwater, Penrose" },
+  { key: "fo", abbr: "FO", name: "Family Offices", count: 140, sample: "Ashford Grove, Sterling Hold, Redbrick" },
+  { key: "en", abbr: "EN", name: "Endowments", count: 62, sample: "Midwest State, Coastal Research, River Valley" },
+  { key: "pn", abbr: "PN", name: "Pensions", count: 48, sample: "Western State Teachers, Great Lakes, NorthSea" },
+  { key: "sv", abbr: "SV", name: "Sovereigns", count: 22, sample: "Gulf Development, Nordic Reserve, Pacific Crown" },
+] as const;
+
+export function BuyerNetworkCard({ variant = "full" }: BuyerNetworkCardProps) {
+  if (variant === "lp") {
+    return <BuyerCoverageLpCard />;
+  }
+
+  const tiers = BUYER_TIERS;
   const total = tiers.reduce((a, b) => a + b.count, 0);
-  // 60 dots, each represents ~8 mandates
   const dots: string[] = [];
   tiers.forEach((t) => {
     const n = Math.round((t.count / total) * 60);
@@ -121,7 +98,7 @@ export function BuyerNetworkCard() {
   dots.length = 60;
 
   return (
-    <div className="pv-card">
+    <div className="pv-card pv-card--mock-live">
       <div className="pv-head">
         <div className="pv-title">Buyer Coverage</div>
         <span className="pv-badge live">

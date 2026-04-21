@@ -5,7 +5,7 @@ export default function DealCertificate() {
       <aside className="cert" aria-label="Deal Certificate preview">
         <div className="cert-head">
           <div>
-            <div className="cert-fund">Meridian Growth Fund IV, L.P.</div>
+            <div className="cert-fund">Vantage Strand Fund IV, L.P.</div>
             <div className="cert-sub">LP Interest · $4.2M Commitment</div>
           </div>
           <div className="cert-seal">VERIFIED<br />72 HR</div>

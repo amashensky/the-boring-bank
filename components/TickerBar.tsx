@@ -1,12 +1,12 @@
 const DEALS = [
-  { fund: "Apollo Growth Fund VIII", meta: "2019 Vintage | Buyout", price: "97.2 NAV" },
-  { fund: "Insight Venture Partners XI", meta: "2020 Vintage | Growth", price: "94.8 NAV" },
-  { fund: "Blackstone Capital Partners VII", meta: "2018 Vintage | Buyout", price: "101.4 NAV" },
-  { fund: "TA Associates XIV", meta: "2021 Vintage | Growth", price: "92.1 NAV" },
-  { fund: "Vista Equity Partners VII", meta: "2019 Vintage | Buyout", price: "98.7 NAV" },
-  { fund: "Accel-KKR Capital Partners VI", meta: "2020 Vintage | Tech", price: "95.3 NAV" },
-  { fund: "Thoma Bravo Fund XIV", meta: "2020 Vintage | Buyout", price: "99.8 NAV" },
-  { fund: "Sequoia Capital Global Growth III", meta: "2018 Vintage | Venture", price: "88.6 NAV" },
+  { fund: "Summit Ridge Growth Fund VIII", meta: "2019 Vintage | Buyout", price: "97.2 NAV" },
+  { fund: "Beacon Hill Venture Partners XI", meta: "2020 Vintage | Growth", price: "94.8 NAV" },
+  { fund: "Granite Point Capital Partners VII", meta: "2018 Vintage | Buyout", price: "101.4 NAV" },
+  { fund: "Riverside Growth Fund XIV", meta: "2021 Vintage | Growth", price: "92.1 NAV" },
+  { fund: "Sterling Bay Equity Partners VII", meta: "2019 Vintage | Buyout", price: "98.7 NAV" },
+  { fund: "Harbor Ridge Technology Fund VI", meta: "2020 Vintage | Tech", price: "95.3 NAV" },
+  { fund: "Redwood Bay Partners Fund XIV", meta: "2020 Vintage | Buyout", price: "99.8 NAV" },
+  { fund: "Cascade Global Growth Fund III", meta: "2018 Vintage | Venture", price: "88.6 NAV" },
 ];
 
 export default function TickerBar() {
@@ -20,7 +20,7 @@ export default function TickerBar() {
             <span className="fund">{d.fund}</span>
             <span className="meta">{d.meta}</span>
             <span className="price">{d.price}</span>
-            <span className="sep">&#9679;</span>
+            <span className="sep" aria-hidden>&middot;</span>
           </span>
         ))}
       </div>

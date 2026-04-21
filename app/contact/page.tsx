@@ -1,4 +1,5 @@
 import ContactForm from "./ContactForm";
+import ContactNextSteps from "@/components/ContactNextSteps";
 
 export const metadata = {
   title: "Contact. The Boring Bank.",
@@ -15,33 +16,20 @@ export default function ContactPage() {
         </div>
       </header>
 
-      <section>
-        <div className="container-narrow">
-          <ContactForm />
+      <section className="ctc-section">
+        <div className="ctc-bg" aria-hidden>
+          <div className="ctc-grain" />
+          <div className="ctc-glow ctc-glow--sage" />
+          <div className="ctc-glow ctc-glow--amber" />
         </div>
-      </section>
-
-      <section style={{ background: "var(--off)", borderTop: "1px solid var(--line-soft)", padding: "64px 0" }}>
-        <div className="container">
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 48 }} className="contact-grid">
-            <div>
-              <div className="section-label" style={{ marginBottom: 14 }}>Direct</div>
-              <a style={{ display: "block", fontSize: 14, color: "var(--ink)", marginBottom: 6 }} href="mailto:hello@theboringbank.com">hello@theboringbank.com</a>
-              <a style={{ display: "block", fontSize: 14, color: "var(--ink-2)" }} href="tel:+12125551234">+1 (212) 555&#8209;1234</a>
-            </div>
-            <div>
-              <div className="section-label" style={{ marginBottom: 14 }}>New York</div>
-              <p style={{ fontSize: 14, lineHeight: 1.7, color: "var(--ink-2)" }}>One Madison Avenue<br />New York, NY 10010</p>
-            </div>
-            <div>
-              <div className="section-label" style={{ marginBottom: 14 }}>For Sellers</div>
-              <a style={{ display: "block", fontSize: 14, color: "var(--ink)" }} href="mailto:sellers@theboringbank.com">sellers@theboringbank.com</a>
-            </div>
-            <div>
-              <div className="section-label" style={{ marginBottom: 14 }}>For Buyers</div>
-              <a style={{ display: "block", fontSize: 14, color: "var(--ink)" }} href="mailto:buyers@theboringbank.com">buyers@theboringbank.com</a>
-            </div>
+        <div className="container ctc-grid">
+          <div className="ctc-form-col">
+            <ContactForm />
           </div>
+
+          <aside className="ctc-side-col">
+            <ContactNextSteps />
+          </aside>
         </div>
       </section>
     </>

@@ -1,5 +1,12 @@
 import CtaBand from "@/components/CtaBand";
+import ScrollRevealInit from "@/components/ScrollRevealInit";
+import InteractiveCardTracker from "@/components/InteractiveCardTracker";
+import LpQuote from "@/components/LpQuote";
+import { APP_SELLER_SIGNUP } from "@/lib/appUrls";
+import SplitWithMatchedVisual from "@/components/SplitWithMatchedVisual";
 import { TimelineCard, BuyerNetworkCard } from "@/components/ServiceVisuals";
+import { ValuationCard } from "@/components/ProductVisuals";
+import LpLedIntro from "@/components/LpLedIntro";
 
 export const metadata = {
   title: "LP-Led Secondary. The Boring Bank.",
@@ -9,78 +16,77 @@ export const metadata = {
 export default function LpLedPage() {
   return (
     <>
-      <header className="page-intro">
-        <div className="container inner">
-          <div className="eyebrow reveal">Services</div>
-          <h1 className="reveal reveal-1">LP&#8209;Led Secondary.</h1>
-        </div>
-      </header>
+      <ScrollRevealInit />
+      <InteractiveCardTracker />
+      <LpLedIntro />
 
       <section>
         <div className="container">
-          <div className="split-stack">
-            <div className="split">
-              <div className="split-copy">
-                <div className="section-label">Timeline</div>
-                <h3>One track. Intake to wire.</h3>
-                <p>Upload your docs. We rebuild NAV, flag restrictions, and produce a pricing memo. Blind profile goes to matched buyers. Bids rank on a live leaderboard.</p>
-                <ul className="feature-list">
-                  <li><span>Prepare: NAV rebuilt, LPA flagged, pricing memo stamped</span></li>
-                  <li><span>Match: blind profile to scored buyers, live bid ranking</span></li>
-                  <li><span>Close: SPA drafted, GP consent, success fee on wire</span></li>
-                </ul>
-              </div>
-              <div className="split-visual"><TimelineCard /></div>
-            </div>
+          <div className="split-stack split-stack--lp-led-mock">
+            <SplitWithMatchedVisual
+              splitClassName="split--timeline-nolede"
+              copy={
+                <>
+                  <div className="section-label">Timeline</div>
+                  <h3>One track. Intake to wire.</h3>
+                  <ul className="feature-list feature-list--roomy">
+                    <li><span>NAV reconstruction anchored to audited financials and comps</span></li>
+                    <li><span>Blind profile released only to mandate&#8209;matched buyers</span></li>
+                    <li><span>Live leaderboard of indications through every round</span></li>
+                    <li><span>One senior banker from intake to signed SPA</span></li>
+                  </ul>
+                </>
+              }
+              visual={<TimelineCard />}
+            />
 
-            <div className="split flip">
-              <div className="split-copy">
-                <div className="section-label">Buyer Coverage</div>
-                <h3>Scored mandates. No mass&#8209;blast.</h3>
-                <p>We match your position to buyers with genuine fit across secondary funds, family offices, endowments, pensions, and sovereign wealth. Fewer bids, higher conviction, faster close.</p>
-                <ul className="feature-list">
-                  <li><span>Mandate&#8209;level scoring on strategy, vintage, and ticket size</span></li>
-                  <li><span>Blind profile until you authorize disclosure</span></li>
-                  <li><span>No cold outreach, no information leakage</span></li>
-                </ul>
-              </div>
-              <div className="split-visual"><BuyerNetworkCard /></div>
-            </div>
-          </div>
-        </div>
-      </section>
+            <LpQuote slot={0} />
 
-      <section style={{ background: "var(--stone)", borderTop: "1px solid var(--line-soft)", borderBottom: "1px solid var(--line-soft)" }}>
-        <div className="container">
-          <div className="section-label">What You Get</div>
-          <h2 className="with-accent">Institutional execution for mid&#8209;market stakes.</h2>
-          <div className="pillars" style={{ marginTop: 56 }}>
-            <div className="pillar">
-              <div className="pillar-kicker">Pricing</div>
-              <h4>Competitive bid process.</h4>
-            </div>
-            <div className="pillar">
-              <div className="pillar-kicker">Speed</div>
-              <h4>Weeks to initial offers.</h4>
-            </div>
-            <div className="pillar">
-              <div className="pillar-kicker">Coverage</div>
-              <h4>500+ verified buyers.</h4>
-            </div>
-            <div className="pillar">
-              <div className="pillar-kicker">Economics</div>
-              <h4>Success fees only.</h4>
-            </div>
+            <SplitWithMatchedVisual
+              flip
+              splitClassName="split--timeline-nolede"
+              copy={
+                <>
+                  <div className="section-label">Buyer Coverage</div>
+                  <h3>Scored mandates. No mass&#8209;blast.</h3>
+                  <ul className="feature-list feature-list--roomy">
+                    <li><span>Mandate&#8209;level scoring on strategy, vintage, and ticket size</span></li>
+                    <li><span>Identity disclosed only when you explicitly authorize</span></li>
+                    <li><span>No mass blast, no cold outreach, no broad broker sweep</span></li>
+                    <li><span>Coverage across funds, family offices, and sovereigns</span></li>
+                  </ul>
+                </>
+              }
+              visual={<BuyerNetworkCard variant="lp" />}
+            />
+
+            <LpQuote slot={1} />
+
+            <SplitWithMatchedVisual
+              splitClassName="split--timeline-nolede"
+              copy={
+                <>
+                  <div className="section-label">How We Work</div>
+                  <h3>Fair value. Right buyer.</h3>
+                  <ul className="feature-list feature-list--roomy">
+                    <li><span>Indicative range anchored to NAV, GP marks, and comps</span></li>
+                    <li><span>Scored mandates only, never a broad broker sweep</span></li>
+                    <li><span>Same senior bankers from valuation memo to SPA</span></li>
+                    <li><span>Fees and workstreams agreed upfront, no surprises</span></li>
+                  </ul>
+                </>
+              }
+              visual={<ValuationCard matchBidFootprint />}
+            />
           </div>
         </div>
       </section>
 
       <CtaBand
-        eyebrow="Request a Valuation"
+        tone="lp-led"
         title="See where your stake would clear."
-        lede="Indicative range within one business day."
-        primaryLabel="Request Valuation"
-        primaryHref="/contact"
+        primaryLabel="Get Started"
+        primaryHref={APP_SELLER_SIGNUP}
         ghostLabel="See Full Process"
         ghostHref="/how-it-works"
       />
